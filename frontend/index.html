@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VittNazar - Promise-to-Term Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+    <div>
+        <h1>VittNazar</h1>
+        <p id="tagline">Promise-to-Term Verification</p>
+    </div>
+
+    <div class="header-actions">
+        <button
+            type="button"
+            id="language-en"
+            class="language-btn active"
+        >
+            English
+        </button>
+
+        <button
+            type="button"
+            id="language-hi"
+            class="language-btn"
+        >
+            हिंदी
+        </button>
+
+        <span class="badge">Investor Protection</span>
+    </div>
+</header>
+    <main class="container">
+
+        <section class="hero">
+            <h2 id="hero-title">
+    Know what was promised before you commit.
+</h2>
+            <p id="hero-description">
+    Compare a financial sales pitch with the official product
+    documentation and identify claims that are supported,
+    incomplete, or conflict with the supplied terms.
+</p>
+        </section>
+
+        <section class="input-grid">
+
+            <div class="card">
+                <h3 id="sales-title">1. Sales Pitch</h3>
+                <p id="sales-helper" class="helper">
+    Paste the message, email, or sales statement.
+</p>
+
+                <textarea
+                    id="pitch"
+                    placeholder="Example: Guaranteed 12% return with zero charges. Withdraw anytime."
+                ></textarea>
+            </div>
+
+            <div class="card">
+    <h3 id="document-title">2. Official Document</h3>
+
+    <p id="document-helper" class="helper">
+    Upload the official product PDF or paste its relevant text.
+</p>
+
+    <div class="file-upload">
+    <label for="document-file" class="upload-dropzone">
+        <span class="upload-icon">↑</span>
+        <span class="upload-title">Upload Official Product PDF</span>
+        <span class="upload-subtitle">Choose a PDF from your device</span>
+    </label>
+
+    <input
+        type="file"
+        id="document-file"
+        accept=".pdf,application/pdf"
+    >
+
+    <button
+        type="button"
+        id="extract-btn"
+        class="secondary-btn"
+    >
+        Extract PDF
+    </button>
+</div>
+
+    <p id="file-status" class="file-status"></p>
+
+    <textarea
+        id="official-document"
+        placeholder="Extracted PDF text will appear here, or paste the relevant document text manually."
+    ></textarea>
+</div>
+
+        </section>
+
+        <div class="action-area">
+            <button id="analyze-btn">
+                Analyze with VittNazar
+            </button>
+
+            <p id="error-message" class="error"></p>
+        </div>
+
+        <section class="card receipt-lookup">
+    <h3 id="lookup-title">
+    Retrieve a Promise Receipt
+</h3>
+
+    <p id="lookup-helper" class="helper">
+    Enter a Receipt ID to reopen a previously saved receipt.
+</p>
+
+    <div class="lookup-row">
+        <input
+            type="text"
+            id="receipt-id-input"
+            placeholder="Example: VN-20261003-120404"
+        >
+
+        <button
+            type="button"
+            id="lookup-receipt-btn"
+            class="secondary-btn"
+        >
+            Retrieve Receipt
+        </button>
+    </div>
+
+    <p
+        id="lookup-status"
+        class="file-status"
+    ></p>
+</section>
+
+        <section id="results" class="results hidden">
+
+            <div class="results-header">
+    <div>
+        <div class="receipt-header">
+    <div>
+        <h2 id="receipt-title">Promise Receipt</h2>
+        <div class="receipt-id-row">
+    <p id="receipt-id"></p>
+
+    <button
+        type="button"
+        id="copy-receipt-id"
+        class="secondary-btn hidden"
+    >
+        Copy ID
+    </button>
+</div>
+    </div>
+
+    <div class="receipt-actions">
+    <button
+        id="print-receipt"
+        class="hidden"
+    >
+        Print Receipt
+    </button>
+
+    <button
+        id="save-pdf"
+        class="hidden"
+    >
+        Save as PDF
+    </button>
+</div>
+</div>
+
+<div id="summary" class="summary"></div>
+<div id="document-metadata" class="document-metadata hidden">
+    <h3>Verified Document</h3>
+
+    <p id="document-filename"></p>
+
+    <p id="document-fingerprint"></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="pressure-section" class="pressure-section hidden">
+    <h3 id="pressure-title">Pressure Signals</h3>
+
+    <p id="pressure-helper" class="helper">
+    These are persuasion patterns detected in the sales message.
+    They are not proof of wrongdoing.
+</p>
+
+    <div id="pressure-items"></div>
+</div>
+
+<div id="result-items"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        VittNazar does not determine whether a seller is fraudulent
+        or whether an investment is suitable. It compares supplied
+        claims with supplied documentation and highlights information
+        that requires independent verification.
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
