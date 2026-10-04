@@ -41,20 +41,13 @@ First-time retail investors who may have difficulty understanding
 financial sales communication and product documentation.
 
 
-
 \### Primary SANGYAN Track
 
-
-
-Track B - Investor Awareness, Rights \& Grievance Redressal
-
-
+Track E - Misinformation & Financial Content Literacy
 
 \### Supporting Track
 
-
-
-Track E - Misinformation \& Financial Content Literacy
+Track D - Financial Habits & Behavioural Resilience
 
 
 
